@@ -48,8 +48,9 @@
 
         .size {
             width: 20%;
-            height: 35px;
+            height: 55px;
             padding: 8px;
+            margin-bottom: 10px;
             margin-left: 10px;
             border: 1px solid #ddd;
             border-radius: 4px;
@@ -86,6 +87,20 @@
 <body>
     <div class="calculator">
         <h2>Cache Calculator</h2>
+
+        <div class="input-group">
+            <label for="memorySize">Memory Size:</label>
+            <div class="flex-container">
+                <input type="number" id="memorySize" placeholder="Enter memory size">
+                <select class="size" id="memorySizeUnit">
+                    <option value="KB">KB</option>
+                    <option value="MB">MB</option>
+                    <option value="GB">GB</option>
+                    <option value="GB">TB</option>
+                </select>
+            </div>
+        </div>
+        
         <div class="input-group">
             <label for="cacheSize">Cache Size:</label>
             <div class="flex-container">
@@ -98,11 +113,12 @@
                 </select>
             </div>
         </div>
+
         <div class="input-group">
-            <label for="blockSize">Block Size:</label>
+            <label for="wordSize">Word Size:</label>
             <div class="flex-container">
-                <input type="number" id="blockSize" placeholder="Enter memory size">
-                <select class="size" id="blockSizeUnit">
+                <input type="number" id="wordSize" placeholder="Enter word size">
+                <select class="size" id="wordSizeUnit">
                     <option value="KB">KB</option>
                     <option value="MB">MB</option>
                     <option value="GB">GB</option>
@@ -119,7 +135,7 @@
                 <option value="set">Set Associative</option>
             </select>
         </div>
-        <div class="input-group" id="associativityGroup" style="display: none;">
+        <div class="input-group" id="associativityGroup">
             <label for="associativity">Associativity (k-set):</label>
             <select id="associativity" class="mappingType">
                 <option value="2">2-way</option>
@@ -127,8 +143,8 @@
                 <option value="8">8-way</option>
             </select>
         </div>
-    <button onclick="calculateCache()">Calculate</button>
-    <pre id="result"></pre>
+        <button onclick="calculateCache()">Calculate</button>
+        <pre id="result"></pre>
     </div>
     
 </body>
