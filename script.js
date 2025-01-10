@@ -1,9 +1,10 @@
-
+// Handle visibility of associativity group based on mapping type
 document.getElementById('mappingType').addEventListener('change', function() {
     const associativityGroup = document.getElementById('associativityGroup');
     associativityGroup.style.display = this.value === 'set' ? 'block' : 'none';
 });
 
+// Initialize associativity group visibility
 document.getElementById('associativityGroup').style.display = 
     document.getElementById('mappingType').value === 'set' ? 'block' : 'none';
 
