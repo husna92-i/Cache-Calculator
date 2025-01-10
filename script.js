@@ -1,3 +1,12 @@
+
+document.getElementById('mappingType').addEventListener('change', function() {
+    const associativityGroup = document.getElementById('associativityGroup');
+    associativityGroup.style.display = this.value === 'set' ? 'block' : 'none';
+});
+
+document.getElementById('associativityGroup').style.display = 
+    document.getElementById('mappingType').value === 'set' ? 'block' : 'none';
+
 function convertToBytes(value, unit) {
     const conversions = {
         'bytes': value * Math.pow(2, 3),
