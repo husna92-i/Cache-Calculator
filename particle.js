@@ -12,11 +12,3 @@ for (let i = 0; i < particleCount; i++) {
 
     particlesContainer.appendChild(particle);
 }
-
-document.getElementById('mappingType').addEventListener('change', function () {
-    const associativityGroup = document.getElementById('associativityGroup');
-    associativityGroup.style.display = this.value === 'set' ? 'block' : 'none';
-});
-
-document.getElementById('associativityGroup').style.display =
-    document.getElementById('mappingType').value === 'set' ? 'block' : 'none';
