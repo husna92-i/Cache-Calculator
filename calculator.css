@@ -25,11 +25,11 @@ body {
     max-width: 500px;
     z-index: 1;
     border: 1px solid rgba(0, 255, 255, 0.1);
-    min-height: min-content; /* Ensures the box grows with content */
-    margin: 20px auto; /* Centers the box and adds vertical space */
-    height: auto; /* Allows height to adjust to content */
-    overflow-y: auto; /* Adds scroll if content exceeds viewport */
-    max-height: 90vh; /* Prevents the box from being taller than viewport */
+    min-height: min-content; 
+    margin: 20px auto; 
+    height: auto; 
+    overflow-y: auto; 
+    max-height: 90vh; 
 }
 
 h2 {
