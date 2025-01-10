@@ -125,3 +125,21 @@ function calculateCache() {
             "Error in calculation. Please check your input values.";
     }
 }
+
+function clearCache() {
+
+    document.getElementById('memorySize').value = '';
+    document.getElementById('cacheSize').value = '';
+    document.getElementById('wordSize').value = '';
+
+    document.getElementById('memorySizeUnit').selectedIndex = 0;
+    document.getElementById('cacheSizeUnit').selectedIndex = 0;
+    document.getElementById('wordSizeUnit').selectedIndex = 0;
+    document.getElementById('mappingType').selectedIndex = 0;
+    document.getElementById('associativity').selectedIndex = 0;
+    
+
+    document.getElementById('result').innerText = '';
+
+    document.getElementById('associativityGroup').style.display = 'none';
+}
