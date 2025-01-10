@@ -5,14 +5,15 @@
 }
 
 body {
-    background-color: #001a1a;
     min-height: 100vh;
+    padding: 20px 0; 
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; 
     align-items: center;
     font-family: 'Share Tech Mono', monospace;
     position: relative;
-    overflow: hidden;
+    overflow-y: auto; 
+    background-color: #001a1a;
 }
 
 .calculator {
@@ -24,6 +25,11 @@ body {
     max-width: 500px;
     z-index: 1;
     border: 1px solid rgba(0, 255, 255, 0.1);
+    min-height: min-content; /* Ensures the box grows with content */
+    margin: 20px auto; /* Centers the box and adds vertical space */
+    height: auto; /* Allows height to adjust to content */
+    overflow-y: auto; /* Adds scroll if content exceeds viewport */
+    max-height: 90vh; /* Prevents the box from being taller than viewport */
 }
 
 h2 {
@@ -129,6 +135,19 @@ button:hover {
 
 h2 {
     text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+#result {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 4px;
+    background-color: rgba(0, 255, 255, 0.05);
+    font-family: 'Share Tech Mono', monospace;
+    letter-spacing: 1px;
+    color: #fff;
+    white-space: pre-wrap; 
+    word-break: break-word; 
 }
 
 /* Particles */
